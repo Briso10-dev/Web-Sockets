@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Briso10-dev/Web-Sockets/issues"
   },
-  "homepage": "https://github.com/Briso10-dev/Web-Sockets#readme"
+  "homepage": "https://github.com/Briso10-dev/Web-Sockets#readme",
+  "dependencies": {
+    "socket.io": "^4.8.1"
+  }
 }

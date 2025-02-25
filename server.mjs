@@ -1,7 +1,7 @@
 import { createServer } from "http";
 import { Server } from "socket.io";
 import dotenv from 'dotenv'
-
+import chalk from "chalk";
 dotenv.config()
 
 const httpServer = createServer();
@@ -15,5 +15,5 @@ io.on("connection", (socket) => {
 });
 
 httpServer.listen(port,()=>{
-    console.log("Server is connected");
+    console.log(chalk.blueBright("Server is connected"));
 });

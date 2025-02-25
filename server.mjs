@@ -10,7 +10,7 @@ const io = new Server(httpServer, {
 });
 const port = process.env.PORT || 3000; // Default to 3000 if .env is missing
 
-io.on("connection", (socket) => {
+io.on("connection", (socket) => {     //an event key connection implemented to the socket.io package    
   console.log(socket);
 });
 

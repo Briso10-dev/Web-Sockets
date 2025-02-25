@@ -4,7 +4,7 @@
   "description": "A websocket implementation",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.mjs"
+    "start": "nodemon server/server.mjs"
   },
   "repository": {
     "type": "git",

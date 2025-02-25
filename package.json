@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Briso10-dev/Web-Sockets#readme",
   "dependencies": {
+    "dotenv": "^16.4.7",
     "socket.io": "^4.8.1"
   }
 }

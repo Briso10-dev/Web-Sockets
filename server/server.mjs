@@ -1,7 +1,7 @@
 import { createServer } from "http";
 import { Server } from "socket.io";
 import dotenv from 'dotenv'
-import chalk from "chalk"; 
+import chalk from "chalk";
 
 dotenv.config()
 
@@ -12,13 +12,13 @@ const socket = new Server(httpServer,{
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204    
   }
 });
-const port = process.env.PORT || 3000; // Default to 3000 if .env is missing
+const port = process.env.PORT 
 
 socket.on("connection", (socket) => {     //an event key connection implemented to the socket.io package    
-  console.log(socket);
-  
-  socket.on("message", (data)=>{
-    console.log(data);  
+  console.log(socket);                    //all connection stuffs on the web socket.
+
+  socket.on('message',(data)=>{
+    console.log(data);
   })
 
   socket.emit('message','Hello')

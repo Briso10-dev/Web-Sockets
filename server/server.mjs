@@ -1,7 +1,7 @@
 import { createServer } from "http";
 import { Server } from "socket.io";
 import dotenv from 'dotenv'
-import chalk from "chalk";
+import chalk from "chalk"; 
 
 dotenv.config()
 
@@ -16,9 +16,12 @@ const port = process.env.PORT || 3000; // Default to 3000 if .env is missing
 
 socket.on("connection", (socket) => {     //an event key connection implemented to the socket.io package    
   console.log(socket);
+  
+  socket.on("message", (data)=>{
+    console.log(data);  
+  })
+
   socket.emit('message','Hello')
 });
 
-httpServer.listen(port,()=>{
-    console.log(chalk.blueBright("Server is connected"));
-});
+httpServer.listen(port,()=>{});

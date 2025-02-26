@@ -14,14 +14,20 @@ const socket = new Server(httpServer,{
 });
 const port = process.env.PORT 
 
-socket.on("connection", (socket) => {     //an event key connection implemented to the socket.io package    
-  console.log(socket);                    //all connection stuffs on the web socket.
+socket.on("connection", (socket) => {     
+  console.log(socket);                    //all informational stuffs concerning the web socket successful connection.
 
-  socket.on('message',(data)=>{
+  socket.on('message',(data)=>{           //Server preparing himself to receive the client's requestion(same connection event)
     console.log(data);
   })
 
-  socket.emit('message','Hello')
+  socket.emit('message','Hello')         //Server requesting info to client
 });
 
 httpServer.listen(port,()=>{});
+
+/*
+NB : 
+1. Connection event : an event key connection implemented to the socket.io package    
+
+*/
